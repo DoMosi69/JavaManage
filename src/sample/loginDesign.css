@@ -1,0 +1,29 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 30, 2024, 6:31:44 PM
+    Author     : DoMo
+*/
+.left-form {
+    -fx-background-color: linear-gradient(to bottom right, #174590, #7067ee );
+    -fx-border-color: #000;
+    -fx-border-width: 4px 0px .4px .4px;
+} 
+
+.right-form {
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: 4px 0px .4px .4px;
+} 
+
+.login {
+  -fx-background-color: linear-gradient(to bottom right, #174590, #7067ee );
+  -fx-cursor:hand;
+}
+.login :hover {
+    -fx-background-color: transparent;
+}
+
+

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.dashboardController">
+   <children>
+      <StackPane layoutX="217.0" layoutY="122.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="1484.0" style="-fx-background-color: linear-gradient(to bottom right, #174590, #7067ee);">
+         <children>
+            <AnchorPane fx:id="dashboard" prefHeight="681.0" prefWidth="1516.0">
+               <children>
+                  <Label layoutX="471.0" layoutY="24.0" prefHeight="40.0" prefWidth="438.0" text="HOTEL MANAGEMENT" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="-9.0" layoutY="145.0" prefHeight="481.0" prefWidth="417.0">
+                     <children>
+                        <Label layoutX="17.0" layoutY="17.0" text="Name:" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="195.0" text="Book-Date" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="59.0" text="Sex: " textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="17.0" layoutY="240.0" text="In-Date" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="147.0" text="Gmail:" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txfName" layoutX="140.0" layoutY="14.0" prefHeight="25.0" prefWidth="200.0" />
+                        <TextField fx:id="txfGmail" layoutX="140.0" layoutY="143.0" prefHeight="25.0" prefWidth="200.0" />
+                        <RadioButton fx:id="radioMale" layoutX="145.0" layoutY="62.0" mnemonicParsing="false" text="Male" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="radioFemale" layoutX="211.0" layoutY="62.0" mnemonicParsing="false" text="Female" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <Label layoutX="17.0" layoutY="102.0" text="Tel:" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txfTel" layoutX="140.0" layoutY="99.0" prefHeight="25.0" prefWidth="200.0" />
+                        <Label layoutX="16.0" layoutY="327.0" text="Room Type" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="377.0" text="Room No." textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="20.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dpBD" layoutX="139.0" layoutY="190.0" prefHeight="25.0" prefWidth="200.0" />
+                        <Label layoutX="14.0" layoutY="287.0" text="Out-Date: " textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dpInD" layoutX="139.0" layoutY="234.0" prefHeight="25.0" prefWidth="200.0" />
+                        <DatePicker fx:id="dpOD" layoutX="139.0" layoutY="281.0" prefHeight="25.0" prefWidth="200.0" />
+                        <TextField fx:id="txfRN" layoutX="138.0" layoutY="373.0" prefHeight="25.0" prefWidth="174.0" />
+                        <ChoiceBox fx:id="cbRT" layoutX="138.0" layoutY="326.0" prefHeight="25.0" prefWidth="174.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="407.0" layoutY="101.0" prefHeight="429.0" prefWidth="1048.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="15.0" text="Search:" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txfSearch" layoutX="87.0" layoutY="14.0" prefHeight="25.0" prefWidth="232.0" promptText="Enter Customer Name" />
+                        <TableView fx:id="tableView" layoutX="14.0" layoutY="54.0" onSort="#customerShowlistData" prefHeight="361.0" prefWidth="996.0">
+                          <columns>
+                            <TableColumn fx:id="add_Col_Id" prefWidth="51.0" text="ID" />
+                            <TableColumn fx:id="add_Col_FN" prefWidth="131.0" text="Name" />
+                              <TableColumn fx:id="add_Col_Sex" prefWidth="61.0" text="Sex" />
+                              <TableColumn fx:id="add_Col_Tel" prefWidth="118.0" text="Tel" />
+                              <TableColumn fx:id="add_Col_Gmail" prefWidth="172.0" text="Gmail" />
+                              <TableColumn fx:id="add_Col_BD" prefWidth="99.0" text="Book-Date" />
+                              <TableColumn fx:id="add_Col_InD" prefWidth="92.0" text="In-Date" />
+                              <TableColumn fx:id="add_Col_OD" prefWidth="87.0" text="Out-Date" />
+                              <TableColumn fx:id="add_Col_RT" prefWidth="114.0" text="Room Type" />
+                              <TableColumn fx:id="add_Col_RN" prefWidth="70.0" text="Room No" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="btnAdd" layoutX="499.0" layoutY="542.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="40.0" prefWidth="127.0" text="ADD">
+                     <font>
+                        <Font name="Bell MT Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEdit" layoutX="650.0" layoutY="543.0" mnemonicParsing="false" onMouseClicked="#removeCustomer" prefHeight="40.0" prefWidth="127.0" text="EDIT">
+                     <font>
+                        <Font name="Bell MT Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnRemove" layoutX="804.0" layoutY="543.0" mnemonicParsing="false" onAction="#removeCustomer" prefHeight="40.0" prefWidth="127.0" text="REMOVE">
+                     <font>
+                        <Font name="Bell MT Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCancel" layoutX="953.0" layoutY="542.0" mnemonicParsing="false" onAction="#clearTextFields" prefHeight="40.0" prefWidth="127.0" text="Clear">
+                     <font>
+                        <Font name="Bell MT Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="close" fitHeight="33.0" fitWidth="33.0" layoutX="1378.0" layoutY="31.0">
+                     <image>
+                        <Image url="@../image/close.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="logout" fitHeight="56.0" fitWidth="56.0" layoutX="33.0" layoutY="24.0" onMouseClicked="#logout">
+                     <image>
+                        <Image url="@../image/logout-1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

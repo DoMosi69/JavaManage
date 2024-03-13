@@ -1,0 +1,44 @@
+.top-form {
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: 0.4px 0.1px 3px 0.4px;
+}
+
+.main-top-form {
+    -fx-background-color: #ddd;
+    -fx-border-color: #000;
+    -fx-border-width: 0px 0px 0.4px 0.0px;
+}
+
+.left-form {
+    -fx-background-color: linear-gradient(to bottom right, #191970, #7067ee);
+    -fx-border-color: #000;
+    -fx-border-width: 3px 0px 0.3px 0.3px;
+}
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+}
+
+.white-bg {
+    -fx-background-color: #fff;
+    -fx-background-radius: 15px;
+}
+
+.mid-box {
+    -fx-background-color: linear-gradient(to bottom, #7067ee, #0080ff);
+    -fx-border-color: #808080;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 4, 0, 0, 0);
+}
+
+.mid-color {
+    -fx-background-color: linear-gradient(to bottom right, #191970, #7067ee);
+}
